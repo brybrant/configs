@@ -1,9 +1,9 @@
-// https://stylelint.io/user-guide/configure/
-// https://stylelint.io/awesome-stylelint/
-
-// snake_case
+/** snake_case */
 const namePattern = /^[a-z][a-z0-9]*(_[a-z0-9]+)*$/;
 
+/**
+ * https://stylelint.io/user-guide/configure/
+ */
 export default {
   cache: true,
   extends: [

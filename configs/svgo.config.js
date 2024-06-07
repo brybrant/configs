@@ -1,4 +1,6 @@
-// https://svgo.dev/docs/plugins/
+/**
+ * @property {String[]} plugins - SVGO plugins (https://svgo.dev/docs/plugins/)
+ */
 export default {
   plugins: [
     'removeDoctype',
