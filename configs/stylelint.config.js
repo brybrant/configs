@@ -3,6 +3,7 @@ const namePattern = /^[a-z][a-z0-9]*(_[a-z0-9]+)*$/;
 
 /**
  * https://stylelint.io/user-guide/configure/
+ * @type {Object}
  */
 export default {
   cache: true,
