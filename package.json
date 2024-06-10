@@ -6,7 +6,12 @@
   "version": "1.0.0",
   "type": "module",
   "exports": {
-    ".": "./index.js"
+    ".": "./index.js",
+    "./cssmodules": "./configs/cssmodules.js",
+    "./postcss": "./configs/postcss.config.js",
+    "./purgecss": "./configs/purgecss.config.js",
+    "./stylelint": "./configs/stylelint.config.js",
+    "./svgo": "./configs/svgo.config.js"
   },
   "files": [
     "./index.js",
