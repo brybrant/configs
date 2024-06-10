@@ -9,6 +9,7 @@
     ".": "./index.js"
   },
   "files": [
+    "./index.js",
     "./configs/*.js"
   ],
   "repository": {
