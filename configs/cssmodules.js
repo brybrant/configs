@@ -2,7 +2,7 @@ import { basename } from 'node:path';
 import { mkdir, writeFileSync } from 'node:fs';
 
 /**
- * Export CSS module JSON ("class": "transformedClass")
+ * Export CSS module JSON {"class": "transformedClass"}
  * https://github.com/madyankin/postcss-modules
  * @param {String} cssFileName - Name of the CSS file
  * @param {Object.<String, String>} json - Transformed classes
