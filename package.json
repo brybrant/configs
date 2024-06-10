@@ -9,7 +9,7 @@
     ".": "./index.js"
   },
   "files": [
-    "./*.js"
+    "./configs/*.js"
   ],
   "repository": {
     "type": "git",
