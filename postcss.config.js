@@ -10,7 +10,6 @@ import purgeCSSConfig from './purgecss.config';
 
 /**
  * https://github.com/postcss/postcss-load-config
- * @type {Function}
  * @param {Object} [ctx] - Context
  * @param {String} ctx.env - Environment (process.env.NODE_ENV)
  * @param {String} ctx.cwd - Current working directory (process.cwd())

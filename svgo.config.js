@@ -1,5 +1,4 @@
 /**
- * @type {Object}
  * @property {String[]} plugins - SVGO plugins (https://svgo.dev/docs/plugins/)
  */
 export default {

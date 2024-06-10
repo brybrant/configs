@@ -12,7 +12,6 @@
 
 /**
  * https://purgecss.com/configuration.html
- * @type {Object}
  * @property {String[]} content - Filenames or globs for PurgeCSS to analyze
  * @property {Extractor[]} extractors - Custom extractors
  * @property {String[]} safelist - Selectors that are safe to leave in the CSS

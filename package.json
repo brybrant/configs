@@ -3,11 +3,17 @@
   "author": "brybrant",
   "license": "GPL-3.0-only",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
-  "main": "index.js",
+  "exports": {
+    "cssmodules": "./cssmodules.js",
+    "postcss": "./postcss.config.js",
+    "purgecss": "./purgecss.config.js",
+    "stylelint": "./stylelint.config.js",
+    "svgo": "./svgo.config.js"
+  },
   "files": [
-    "./configs/*"
+    "./*.js"
   ],
   "repository": {
     "type": "git",
