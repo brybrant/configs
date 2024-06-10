@@ -1,7 +1,7 @@
 import autoprefixer from 'autoprefixer';
 import purgeCSSPlugin from '@fullhuman/postcss-purgecss';
 
-import purgeCSSConfig from './purgecss.config';
+import purgeCSSConfig from './purgecss.config.js';
 
 /**
  * @typedef {Object} Configuration
