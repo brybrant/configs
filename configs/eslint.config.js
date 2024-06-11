@@ -7,12 +7,12 @@ import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
 /**
  * https://eslint.org/docs/latest/integrate/nodejs-api#-new-eslintoptions
- * @param {ESLintConfig} [config] - An ESLint configuration object
+ * @param {ESLintConfig|ESLintConfig[]} [config] - ESLint config object(s)
  * @returns {ESLintConfig[]}
  */
 export default (config) => ([
   js.configs.recommended,
-  ...config ? [config] : [],
+  ...config ? (Array.isArray(config) ? config : [config]) : [],
   eslintPluginPrettier,
   {
     'prettier/prettier': [
