@@ -1,5 +1,6 @@
 /**
- * @property {String[]} plugins - SVGO plugins (https://svgo.dev/docs/plugins/)
+ * https://svgo.dev/docs/plugins/
+ * @type {import('svgo').Config}
  */
 export default {
   plugins: [

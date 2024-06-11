@@ -4,8 +4,7 @@ import purgeCSSPlugin from '@fullhuman/postcss-purgecss';
 import purgeCSSConfig from './purgecss.config.js';
 
 /**
- * @typedef {Object} Configuration
- * @property {Array} [plugins] - Array of PostCSS plugins
+ * @typedef {import('postcss-load-config').Config} Configuration
  */
 
 /**
