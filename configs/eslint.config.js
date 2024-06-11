@@ -12,18 +12,18 @@ import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
  * @returns {ESLintConfig}
  */
 export default (config) => ({
-  baseConfig: Object.assign({},
-    js.configs.recommended,
-    config,
-    eslintPluginPrettier,
-    {
+  baseConfig: {
+    ...js.configs.recommended,
+    ...config,
+    ...eslintPluginPrettier,
+    ...{
       'prettier/prettier': [
         {
           'endOfLine': 'auto',
         },
       ],
     },
-  ),
+  },
   cache: true,
   lintInWorker: true,
 });
