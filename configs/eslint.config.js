@@ -1,7 +1,7 @@
 import js from '@eslint/js';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
-import prettierConfig from './prettier.config';
+import prettierConfig from './prettier.config.js';
 
 /**
  * @typedef {import('eslint').Linter.FlatConfig} ESLintConfig
