@@ -17,6 +17,7 @@ export default (config) => ([
   {
     rules: {
       'prettier/prettier': [
+        'error',
         {
           'endOfLine': 'auto',
         },
