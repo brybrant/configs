@@ -15,10 +15,12 @@ export default (config) => ([
   ...config ? (Array.isArray(config) ? config : [config]) : [],
   eslintPluginPrettier,
   {
-    'prettier/prettier': [
-      {
-        'endOfLine': 'auto',
-      },
-    ],
+    rules: {
+      'prettier/prettier': [
+        {
+          'endOfLine': 'auto',
+        },
+      ],
+    },
   },
 ]);
