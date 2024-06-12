@@ -1,6 +1,8 @@
 import js from '@eslint/js';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
+import prettierConfig from './prettier.config';
+
 /**
  * @typedef {import('eslint').Linter.FlatConfig} ESLintConfig
  */
@@ -18,9 +20,7 @@ export default (config) => ([
     rules: {
       'prettier/prettier': [
         'error',
-        {
-          'endOfLine': 'auto',
-        },
+        prettierConfig,
       ],
     },
   },
