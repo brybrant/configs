@@ -5,12 +5,11 @@ import prettierConfig from './prettier.config.js';
 
 /**
  * @typedef {import('eslint').Linter.FlatConfig} ESLintConfig
- * @typedef {ESLintConfig|ESLintConfig[]} ESLintConfigs
  */
 
 /**
  * https://eslint.org/docs/latest/integrate/nodejs-api#-new-eslintoptions
- * @param {ESLintConfigs} [config] - ESLint config object(s)
+ * @param {ESLintConfig|ESLintConfig[]} [config] - ESLint config object(s)
  * @returns {ESLintConfig[]}
  */
 export default (config) => ([
