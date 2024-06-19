@@ -17,6 +17,7 @@ export default {
     'stylelint-high-performance-animation',
   ],
   rules: {
+    'alpha-value-notation': 'number',
     'hue-degree-notation': 'number',
     'keyframes-name-pattern': [namePattern, {
       message: 'Expected keyframe name "%s" to be snake_case',
