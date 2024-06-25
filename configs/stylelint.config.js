@@ -22,6 +22,7 @@ export default {
     'keyframes-name-pattern': [namePattern, {
       message: 'Expected keyframe name "%s" to be snake_case',
     }],
+    'selector-attribute-quotes': 'never',
     'selector-class-pattern': [namePattern, {
       message: 'Expected class selector "%s" to be snake_case',
     }],
