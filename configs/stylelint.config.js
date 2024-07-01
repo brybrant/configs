@@ -1,5 +1,7 @@
-/** snake_case */
-const namePattern = /^[a-z][a-z0-9]*(_[a-z0-9]+)*$/;
+/** BEM (block__element--modifier) */
+const bemSyntax = /^[a-z][a-z0-9]*(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+)?$/;
+
+const snake_case = /^[a-z][a-z0-9]*(_[a-z0-9]+)*$/;
 
 /**
  * https://stylelint.io/user-guide/configure/
@@ -19,12 +21,9 @@ export default {
   rules: {
     'alpha-value-notation': 'number',
     'hue-degree-notation': 'number',
-    'keyframes-name-pattern': [namePattern, {
-      message: 'Expected keyframe name "%s" to be snake_case',
-    }],
     'selector-attribute-quotes': 'never',
-    'selector-class-pattern': [namePattern, {
-      message: 'Expected class selector "%s" to be snake_case',
+    'selector-class-pattern': [bemSyntax, {
+      message: 'Expected class selector "%s" to be BEM syntax',
     }],
     'selector-pseudo-element-colon-notation': 'single',
     'value-keyword-case': ['lower', {
@@ -32,4 +31,14 @@ export default {
     }],
     'plugin/no-low-performance-animation-properties': true,
   },
+  overrides: [
+    {
+      files: ['**/*.module.scss'],
+      rules: {
+        'selector-class-pattern': [snake_case, {
+          message: 'Expected class selector "%s" to be snake_case',
+        }],
+      },
+    },
+  ],
 };
