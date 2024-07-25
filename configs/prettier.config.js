@@ -5,6 +5,6 @@
 export default {
   bracketSpacing: false,
   endOfLine: 'auto',
-  singleQuote: true,
+  singleQuote: false,
   jsxSingleQuote: true,
 };
