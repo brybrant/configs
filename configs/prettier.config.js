@@ -3,6 +3,7 @@
  * @type {import('prettier').Config}
  */
 export default {
+  bracketSameLine: false,
   bracketSpacing: true,
   endOfLine: 'auto',
   singleQuote: false,
