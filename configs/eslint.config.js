@@ -41,7 +41,6 @@ export default (config) => ([
       'jsdoc/check-values': 1,
       'jsdoc/empty-tags': 1,
       'jsdoc/implements-on-classes': 1,
-      'jsdoc/lines-before-block': 1,
       'jsdoc/multiline-blocks': 1,
       'jsdoc/no-blank-block-descriptions': 1,
       'jsdoc/no-blank-blocks': 1,
@@ -70,6 +69,7 @@ export default (config) => ([
       jsdoc: {
         tagNamePreference: {
           property: 'prop',
+          augments: 'extends',
         },
       },
     },
