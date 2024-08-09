@@ -66,5 +66,12 @@ export default (config) => ([
       'jsdoc/tag-lines': 1,
       'jsdoc/valid-types': 1,
     },
+    settings: {
+      jsdoc: {
+        tagNamePreference: {
+          property: 'prop',
+        },
+      },
+    },
   },
 ]);
