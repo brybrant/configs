@@ -105,7 +105,7 @@ const jsdocConfig = {
 };
 
 /**
- * https://eslint.org/docs/latest/integrate/nodejs-api#-new-eslintoptions
+ * https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects
  * @param {ESLintConfig|ESLintConfig[]} [config] - ESLint config object(s)
  * @returns {ESLintConfig}
  */
@@ -116,10 +116,7 @@ export default (config) => {
     jsdocConfig,
     {
       extends: [
-        'prettier',
-      ],
-      plugins: [
-        'prettier',
+        'plugin:prettier/recommended',
       ],
       rules: {
         'prettier/prettier': ['error', prettierConfig],
