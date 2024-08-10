@@ -21,7 +21,7 @@ function isObject(value) {
 function mergeDeep(target, ...sources) {
   if (!sources.length) return target;
 
-  sources.reduce((previousObject, currentObject) => {
+  return sources.reduce((previousObject, currentObject) => {
     for (const [key, currentValue] of Object.entries(currentObject)) {
       const previousValue = previousObject[key];
 
@@ -35,7 +35,7 @@ function mergeDeep(target, ...sources) {
     }
 
     return previousObject;
-  }, {});
+  }, target);
 }
 
 /** @typedef {import('eslint').Linter.BaseConfig} ESLintConfig */
