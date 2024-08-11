@@ -49,12 +49,12 @@ const jsdocConfig = {
 
 /**
  * https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects
- * @param {ESLintConfig|ESLintConfig[]} [configs] - ESLint config object(s)
+ * @param {...ESLintConfig} [configs] - ESLint config object(s)
  * @returns {ESLintConfig[]}
  */
-export default (configs) => ([
+export default (...configs) => ([
   js.configs.recommended,
-  ...configs ? (Array.isArray(configs) ? configs : [configs]) : [],
+  ...configs,
   eslintPluginPrettier,
   {
     rules: {
