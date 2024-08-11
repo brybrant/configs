@@ -19,7 +19,7 @@ function isObject(value) {
  * @param {...object} sources
  */
 function mergeDeep(target, ...sources) {
-  if (!sources.length) return target;
+  if (sources.length < 1) return target;
 
   return sources.reduce((previousObject, currentObject) => {
     for (const [key, currentValue] of Object.entries(currentObject)) {
@@ -106,17 +106,20 @@ const jsdocConfig = {
 
 /**
  * https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects
- * @param {ESLintConfig|ESLintConfig[]} [config] - ESLint config object(s)
+ * @param {...ESLintConfig} [configs] - ESLint config object(s)
  * @returns {ESLintConfig}
  */
-export default (config) => {
+export default (...configs) => {
   return mergeDeep(
     baseConfig,
-    config || {},
+    ...configs.length < 1 ? [{}] : configs,
     jsdocConfig,
     {
       extends: [
         'plugin:prettier/recommended',
+      ],
+      plugins: [
+        'prettier',
       ],
       rules: {
         'prettier/prettier': ['error', prettierConfig],
