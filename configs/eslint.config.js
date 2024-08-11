@@ -1,5 +1,5 @@
 import js from '@eslint/js';
-// import jsdoc from 'eslint-plugin-jsdoc';
+import jsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
 import prettierConfig from './prettier.config.js';
@@ -22,12 +22,7 @@ import prettierConfig from './prettier.config.js';
 
 /** @type {ESLintConfig} */
 const jsdocConfig = {
-  extends: [
-    'plugin:jsdoc/recommended',
-  ],
-  plugins: [
-    'jsdoc',
-  ],
+  ...jsdoc.configs['flat/recommended'],
   rules: {
     'jsdoc/check-indentation': 1,
     'jsdoc/check-syntax': 1,
