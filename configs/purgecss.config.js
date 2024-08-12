@@ -1,6 +1,6 @@
 /**
  * https://purgecss.com/configuration.html
- * @type {import('purgecss').Options}
+ * @type {import('@fullhuman/postcss-purgecss').UserDefinedOptions}
  */
 export default {
   content: ['index.html', './src/**/*.(jsx|vue)', './modules/*.json'],
