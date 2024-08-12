@@ -1,4 +1,4 @@
-// import autoprefixer from 'autoprefixer';
+import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import purgeCSSPlugin from '@fullhuman/postcss-purgecss';
 import stylelint from 'stylelint';
@@ -27,6 +27,7 @@ export default (ctx) => {
       stylelint(stylelintConfig),
       purgeCSSPlugin(purgeCSSConfig),
       cssnano(cssnanoConfig),
+      autoprefixer(),
     ],
   };
 };
