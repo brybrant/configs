@@ -4,21 +4,7 @@ import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
 import prettierConfig from './prettier.config.js';
 
-/** @typedef {import('eslint').Linter.Config} ESLintConfig */
-
-/** @type {ESLintConfig} */
-// const baseConfig = {
-//   env: {
-//     browser: true,
-//   },
-//   extends: [
-//     'eslint:recommended',
-//   ],
-//   parserOptions: {
-//     ecmaVersion: 'latest',
-//     sourceType: 'module',
-//   },
-// };
+/** @typedef {import('eslint').Linter.FlatConfig} ESLintConfig */
 
 /** @type {ESLintConfig} */
 const jsdocConfig = {
@@ -44,7 +30,7 @@ const jsdocConfig = {
 
 /**
  * https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects
- * @param {...ESLintConfig} [configs] - ESLint config object(s)
+ * @param {ESLintConfig[]} configs - ESLint config object(s)
  * @returns {ESLintConfig[]}
  */
 export default (...configs) => ([
@@ -57,6 +43,7 @@ export default (...configs) => ([
         'error',
         prettierConfig,
       ],
+      'vue/html-quotes': [1, 'single', { avoidEscape: true }],
     },
   },
   jsdocConfig,
