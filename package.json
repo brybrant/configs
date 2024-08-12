@@ -6,6 +6,10 @@
   "version": "1.0.0",
   "type": "module",
   "exports": {
+    ".": {
+      "types": "./types/*.d.ts",
+      "default": "./configs/*.js"
+    },
     "./cssmodules": {
       "types": "./types/cssmodules.d.ts",
       "default": "./configs/cssmodules.js"
