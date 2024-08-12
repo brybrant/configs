@@ -5,13 +5,44 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "module": "index.js",
-  "exports": "./index.js",
-  "types": "./index.d.ts",
+  "exports": {
+    "./cssmodules": {
+      "types": "./types/cssmodules.d.ts",
+      "default": "./configs/cssmodules.js"
+    },
+    "./cssnano": {
+      "types": "./types/cssnano.config.d.ts",
+      "default": "./configs/cssnano.config.js"
+    },
+    "./eslint": {
+      "types": "./types/eslint.config.d.ts",
+      "default": "./configs/eslint.config.js"
+    },
+    "./postcss": {
+      "types": "./types/postcss.config.d.ts",
+      "default": "./configs/postcss.config.js"
+    },
+    "./prettier": {
+      "types": "./types/prettier.config.d.ts",
+      "default": "./configs/prettier.config.js"
+    },
+    "./purgecss": {
+      "types": "./types/purgecss.config.d.ts",
+      "default": "./configs/purgecss.config.js"
+    },
+    "./stylelint": {
+      "types": "./types/stylelint.config.d.ts",
+      "default": "./configs/stylelint.config.js"
+    },
+    "./svgo": {
+      "types": "./types/svgo.config.d.ts",
+      "default": "./configs/svgo.config.js"
+    }
+  },
   "files": [
-    "index.d.ts",
+    "configs",
     "index.js",
-    "configs"
+    "types"
   ],
   "scripts": {
     "types": "tsc"

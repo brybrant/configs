@@ -6,7 +6,7 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "moduleResolution": "Node",
-    "outFile": "index.d.ts",
+    "outDir": "types",
     "target": "ESNext"
   },
   "include": ["configs"],
