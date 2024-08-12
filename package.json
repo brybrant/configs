@@ -6,12 +6,8 @@
   "version": "1.0.0",
   "type": "module",
   "module": "index.js",
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "default": "./index.js"
-    }
-  },
+  "types": "./index.d.ts",
+  "exports": "./index.js",
   "files": [
     "configs",
     "index.d.ts",
