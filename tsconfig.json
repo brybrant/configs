@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "moduleResolution": "Node",
+    "outFile": "index.d.ts",
+    "target": "ESNext"
+  },
+  "include": ["configs"],
+}

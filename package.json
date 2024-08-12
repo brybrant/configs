@@ -7,10 +7,15 @@
   "type": "module",
   "module": "index.js",
   "exports": "./index.js",
+  "types": "./index.d.ts",
   "files": [
+    "index.d.ts",
     "index.js",
     "configs"
   ],
+  "scripts": {
+    "types": "tsc"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/brybrant/configs.git"
@@ -28,10 +33,15 @@
     "postcss-scss": "^4.0.9",
     "prettier": "^3.3.3",
     "stylelint": "^16.8.1",
-    "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-hudochenkov": "^10.0.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-high-performance-animation": "^1.10.0",
     "svgo": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.10",
+    "@types/node": "^22.2.0",
+    "typescript": "^5.5.4"
   }
 }
