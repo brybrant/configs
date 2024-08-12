@@ -1,8 +1,7 @@
-import advancedPreset from 'cssnano-preset-advanced';
+import defaultPreset from 'cssnano-preset-default';
 
 import svgoConfig from './svgo.config.js';
 
-export default advancedPreset({
-  autoprefixer: {},
+export default defaultPreset({
   svgo: svgoConfig,
 });
