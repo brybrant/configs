@@ -43,7 +43,6 @@ export default (...configs) => ([
         'error',
         prettierConfig,
       ],
-      'vue/html-quotes': [1, 'single', { avoidEscape: true }],
     },
   },
   jsdocConfig,
