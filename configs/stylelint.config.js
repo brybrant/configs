@@ -21,6 +21,9 @@ export default {
   rules: {
     'alpha-value-notation': 'number',
     'hue-degree-notation': 'number',
+    'number-max-precision': [3, {
+      ignoreUnits: ['%'],
+    }],
     'selector-attribute-quotes': 'never',
     'selector-class-pattern': [bemSyntax, {
       message: 'Expected class selector "%s" to be BEM syntax',
