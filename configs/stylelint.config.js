@@ -21,7 +21,7 @@ export default {
   rules: {
     'alpha-value-notation': 'number',
     'hue-degree-notation': 'number',
-    'number-max-precision': [3, {
+    'number-max-precision': [4, {
       ignoreUnits: ['%'],
     }],
     'selector-attribute-quotes': 'never',
