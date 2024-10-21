@@ -6,15 +6,15 @@ import purgeCSSConfig from './purgecss.config.js';
 import stylelintConfig from './stylelint.config.js';
 import cssnanoConfig from './cssnano.config.js';
 /**
- * ## [PostCSS Config Function](./postcss.config.js)
+ * ## PostCSS Config Function
  *
  * ### Syntax:
  * - [SCSS](https://github.com/postcss/postcss-scss#readme)
  *
  * ### Plugins:
- * - Stylelint ([config](./stylelint.config.js))
- * - PurgeCSS ([config](./purgecss.config.js))
- * - CSSNANO ([config](./cssnano.config.js))
+ * - Stylelint ([config](./node_modules/@brybrant/configs/dist/configs/stylelint.config.js))
+ * - PurgeCSS ([config](./node_modules/@brybrant/configs/dist/configs/purgecss.config.js))
+ * - CSSNANO ([config](./node_modules/@brybrant/configs/dist/configs/cssnano.config.js))
  * - Autoprefixer
  */
 const postcssConfigFn = function ( /* ctx */) {

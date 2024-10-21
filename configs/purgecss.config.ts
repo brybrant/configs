@@ -1,7 +1,7 @@
 import type { UserDefinedOptions } from '@fullhuman/postcss-purgecss';
 
-/** 
- * ### [PurgeCSS Config Object](./purgecss.config.js)
+/**
+ * ### PurgeCSS Config Object
  * 
  * https://purgecss.com/configuration.html
  */

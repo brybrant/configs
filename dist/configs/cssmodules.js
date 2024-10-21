@@ -1,7 +1,7 @@
 import { basename } from 'node:path';
 import { mkdir, writeFileSync } from 'node:fs';
 /**
- * ## [CSS Modules Config Function](./cssmodules.js)
+ * ### CSS Modules Config Function
  *
  * Exports [CSS module](https://github.com/madyankin/postcss-modules) selectors
  * as JSON object, where the key is the original selector and the value is the

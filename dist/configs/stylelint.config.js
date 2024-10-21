@@ -2,7 +2,7 @@
 const bemSyntax = /^[a-z][a-z0-9-]*(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+)?$/;
 const snake_case = /^[a-z][a-z0-9]*(_[a-z0-9]+)*$/;
 /**
- * ### [Stylelint Config Object](./stylelint.config.js)
+ * ### Stylelint Config Object
  *
  * https://stylelint.io/user-guide/configure/
  */
@@ -42,6 +42,9 @@ const stylelintConfig = {
                     }],
                 'selector-pseudo-class-no-unknown': [true, {
                         ignorePseudoClasses: ['export'],
+                    }],
+                'property-no-unknown': [true, {
+                        ignoreSelectors: [':export'],
                     }],
             },
         },

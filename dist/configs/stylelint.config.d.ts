@@ -1,6 +1,6 @@
 import type { Config } from 'stylelint';
 /**
- * ### [Stylelint Config Object](./stylelint.config.js)
+ * ### Stylelint Config Object
  *
  * https://stylelint.io/user-guide/configure/
  */

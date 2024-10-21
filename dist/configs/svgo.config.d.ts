@@ -1,6 +1,6 @@
 import type { Config } from 'svgo';
 /**
- * ### [SVGO Config Object](./svgo.config.js)
+ * ### SVGO Config Object
  *
  * https://svgo.dev/docs/plugins/
  */

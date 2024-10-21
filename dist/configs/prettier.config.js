@@ -1,5 +1,5 @@
 /**
- * ### [Prettier Config Object](./prettier.config.js)
+ * ### Prettier Config Object
  *
  * https://prettier.io/docs/en/options
  */
