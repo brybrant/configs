@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "checkJs": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
-    "moduleResolution": "Node",
+    "module": "NodeNext",
+    "outDir": "dist",
+    "sourceMap": true,
     "target": "ESNext"
   },
-  "include": ["index.js"],
+  "include": ["**/*.ts"],
 }

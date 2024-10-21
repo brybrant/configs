@@ -3,18 +3,16 @@
   "author": "brybrant",
   "license": "GPL-3.0-only",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.1",
   "type": "module",
-  "module": "index.js",
-  "types": "./index.d.ts",
-  "exports": "./index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
   "files": [
-    "configs",
-    "index.d.ts",
-    "index.js"
+    "dist"
   ],
   "scripts": {
-    "types": "tsc"
+    "build": "tsc --project tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -25,15 +23,14 @@
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
     "cssnano-preset-default": "^7.0.6",
-    "eslint": "^8.57.1",
+    "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsdoc": "^50.2.4",
+    "eslint-plugin-jsdoc": "^50.4.3",
     "eslint-plugin-prettier": "^5.2.1",
-    "globals": "^15.9.0",
     "postcss-load-config": "^6.0.1",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.3.3",
-    "stylelint": "^16.9.0",
+    "stylelint": "^16.10.0",
     "stylelint-config-hudochenkov": "^10.0.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^13.1.0",
@@ -41,8 +38,8 @@
     "svgo": "^3.3.2"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.12",
-    "@types/node": "^22.7.0",
-    "typescript": "^5.6.2"
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.7.7",
+    "typescript": "^5.6.3"
   }
 }

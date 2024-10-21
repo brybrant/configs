@@ -1,13 +1,13 @@
+import type { Linter } from 'eslint';
+
 import js from '@eslint/js';
 import jsdoc from 'eslint-plugin-jsdoc';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 
 import prettierConfig from './prettier.config.js';
 
-/** @typedef {import('eslint').Linter.FlatConfig} ESLintConfig */
-
-/** @type {ESLintConfig} */
-const jsdocConfig = {
+/** https://github.com/gajus/eslint-plugin-jsdoc#configuration */
+const jsdocConfig: Linter.Config = {
   ...jsdoc.configs['flat/recommended'],
   rules: {
     'jsdoc/check-indentation': 1,
@@ -30,20 +30,25 @@ const jsdocConfig = {
 
 /**
  * https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects
- * @param {ESLintConfig[]} configs - ESLint config object(s)
- * @returns {ESLintConfig[]}
+ * 1. Recommended ESLint config
+ * 2. Custom ESLint config object(s) *(rest parameter)*
+ * 3. Prettier ESLint config
+ * 4. JSDoc ESLint config
+ * @param configs - ESLint config object(s)
  */
-export default (...configs) => ([
-  js.configs.recommended,
-  ...configs,
-  eslintPluginPrettier,
-  {
-    rules: {
-      'prettier/prettier': [
-        'error',
-        prettierConfig,
-      ],
+export default function(...configs: Linter.Config[]): Linter.Config[] {
+  return [
+    js.configs.recommended,
+    ...configs,
+    eslintPluginPrettier,
+    {
+      rules: {
+        'prettier/prettier': [
+          'error',
+          prettierConfig,
+        ],
+      },
     },
-  },
-  jsdocConfig,
-]);
+    jsdocConfig,
+  ];
+};

@@ -4,10 +4,10 @@ import { mkdir, writeFileSync } from 'node:fs';
 /**
  * Export CSS module JSON
  * https://github.com/madyankin/postcss-modules
- * @param {String} cssFileName - Name of the CSS file
- * @param {Record<String, String>} json - {"class": "transformedClass", ...}
+ * @param cssFileName - Name of the CSS file
+ * @param json - {"class": "_class_hash", ...}
  */
-export default (cssFileName, json) => {
+export default (cssFileName: string, json: Record<string, string>) => {
   const module = basename(cssFileName, '.scss');
 
   mkdir('./modules', {recursive: true}, (error) => {

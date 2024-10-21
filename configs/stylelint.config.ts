@@ -1,13 +1,12 @@
+import type { Config } from 'stylelint';
+
 /** BEM (block__element--modifier) */
 const bemSyntax = /^[a-z][a-z0-9-]*(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+)?$/;
 
 const snake_case = /^[a-z][a-z0-9]*(_[a-z0-9]+)*$/;
 
-/**
- * https://stylelint.io/user-guide/configure/
- * @type {import('stylelint').Config}
- */
-export default {
+/** https://stylelint.io/user-guide/configure/ */
+const stylelintConfig: Config = {
   cache: true,
   extends: [
     'stylelint-config-standard-scss',
@@ -21,7 +20,7 @@ export default {
   rules: {
     'alpha-value-notation': 'number',
     'hue-degree-notation': 'number',
-    'number-max-precision': [4, {
+    'number-max-precision': [5, {
       ignoreUnits: ['%'],
     }],
     'selector-attribute-quotes': 'never',
@@ -41,7 +40,12 @@ export default {
         'selector-class-pattern': [snake_case, {
           message: 'Expected class selector "%s" to be snake_case',
         }],
+        'selector-pseudo-class-no-unknown': [true, {
+          ignorePseudoClasses: ['export'],
+        }],
       },
     },
   ],
 };
+
+export default stylelintConfig;

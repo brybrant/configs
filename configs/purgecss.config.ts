@@ -1,8 +1,7 @@
-/**
- * https://purgecss.com/configuration.html
- * @type {import('@fullhuman/postcss-purgecss').UserDefinedOptions}
- */
-export default {
+import type { UserDefinedOptions } from '@fullhuman/postcss-purgecss';
+
+/** https://purgecss.com/configuration.html */
+const purgecssConfig: UserDefinedOptions = {
   content: ['index.html', './src/**/*.(jsx|vue)', './modules/*.json'],
   extractors: [
     {
@@ -16,3 +15,5 @@ export default {
   ],
   safelist: ['active'],
 };
+
+export default purgecssConfig;

@@ -1,8 +1,7 @@
-/**
- * https://svgo.dev/docs/plugins/
- * @type {import('svgo').Config}
- */
-export default {
+import type { Config } from 'svgo';
+
+/** https://svgo.dev/docs/plugins/ */
+const svgoConfig: Config = {
   plugins: [
     'removeDoctype',
     'removeXMLProcInst',
@@ -43,3 +42,5 @@ export default {
     'removeXlink',
   ],
 };
+
+export default svgoConfig;
