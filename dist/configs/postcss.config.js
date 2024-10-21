@@ -5,7 +5,18 @@ import stylelint from 'stylelint';
 import purgeCSSConfig from './purgecss.config.js';
 import stylelintConfig from './stylelint.config.js';
 import cssnanoConfig from './cssnano.config.js';
-/** https://github.com/postcss/postcss-load-config */
+/**
+ * ## [PostCSS Config Function](./postcss.config.js)
+ *
+ * ### Syntax:
+ * - [SCSS](https://github.com/postcss/postcss-scss#readme)
+ *
+ * ### Plugins:
+ * - Stylelint ([config](./stylelint.config.js))
+ * - PurgeCSS ([config](./purgecss.config.js))
+ * - CSSNANO ([config](./cssnano.config.js))
+ * - Autoprefixer
+ */
 const postcssConfigFn = function ( /* ctx */) {
     // const development = ctx.env === 'development';
     const postcssConfig = {

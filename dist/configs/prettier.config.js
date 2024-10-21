@@ -1,4 +1,8 @@
-/** https://prettier.io/docs/en/options */
+/**
+ * ### [Prettier Config Object](./prettier.config.js)
+ *
+ * https://prettier.io/docs/en/options
+ */
 const prettierConfig = {
     bracketSameLine: false,
     bracketSpacing: true,

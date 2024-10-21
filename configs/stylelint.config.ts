@@ -5,7 +5,11 @@ const bemSyntax = /^[a-z][a-z0-9-]*(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+)?$/;
 
 const snake_case = /^[a-z][a-z0-9]*(_[a-z0-9]+)*$/;
 
-/** https://stylelint.io/user-guide/configure/ */
+/** 
+ * ### [Stylelint Config Object](./stylelint.config.js)
+ * 
+ * https://stylelint.io/user-guide/configure/
+ */
 const stylelintConfig: Config = {
   cache: true,
   extends: [

@@ -1,4 +1,8 @@
 import type { UserDefinedOptions } from '@fullhuman/postcss-purgecss';
-/** https://purgecss.com/configuration.html */
+/**
+ * ### [PurgeCSS Config Object](./purgecss.config.js)
+ *
+ * https://purgecss.com/configuration.html
+ */
 declare const purgecssConfig: UserDefinedOptions;
 export default purgecssConfig;

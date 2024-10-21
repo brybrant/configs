@@ -1,4 +1,8 @@
-/** https://svgo.dev/docs/plugins/ */
+/**
+ * ### [SVGO Config Object](./svgo.config.js)
+ *
+ * https://svgo.dev/docs/plugins/
+ */
 const svgoConfig = {
     plugins: [
         'removeDoctype',

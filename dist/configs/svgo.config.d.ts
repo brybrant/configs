@@ -1,4 +1,8 @@
 import type { Config } from 'svgo';
-/** https://svgo.dev/docs/plugins/ */
+/**
+ * ### [SVGO Config Object](./svgo.config.js)
+ *
+ * https://svgo.dev/docs/plugins/
+ */
 declare const svgoConfig: Config;
 export default svgoConfig;

@@ -29,12 +29,15 @@ const jsdocConfig: Linter.Config = {
 };
 
 /**
- * https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects
- * 1. Recommended ESLint config
- * 2. Custom ESLint config object(s) *(rest parameter)*
- * 3. Prettier ESLint config
+ * ## [ESLint Config Function](./eslint.config.js)
+ * 
+ * ### Configs:
+ * 1. [Recommended ESLint config](/node_modules/@eslint/js/src/configs/eslint-recommended.js)
+ * 2. **ESLint config object(s)** *(rest parameter)*
+ * 3. [Prettier ESLint config](./prettier.config.js)
  * 4. JSDoc ESLint config
- * @param configs - ESLint config object(s)
+ * 
+ * @param configs - [ESLint config object(s)](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects)
  */
 export default function(...configs: Linter.Config[]): Linter.Config[] {
   return [

@@ -1,4 +1,8 @@
 import type { Config } from 'stylelint';
-/** https://stylelint.io/user-guide/configure/ */
+/**
+ * ### [Stylelint Config Object](./stylelint.config.js)
+ *
+ * https://stylelint.io/user-guide/configure/
+ */
 declare const stylelintConfig: Config;
 export default stylelintConfig;

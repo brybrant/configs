@@ -1,4 +1,8 @@
-/** https://purgecss.com/configuration.html */
+/**
+ * ### [PurgeCSS Config Object](./purgecss.config.js)
+ *
+ * https://purgecss.com/configuration.html
+ */
 const purgecssConfig = {
     content: ['index.html', './src/**/*.(jsx|vue)', './modules/*.json'],
     extractors: [
