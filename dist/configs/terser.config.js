@@ -5,7 +5,6 @@
  */
 const terserConfig = {
     compress: {
-        booleans_as_integers: true,
         drop_console: true,
         ecma: 2015,
         module: true,
