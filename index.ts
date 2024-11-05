@@ -6,3 +6,4 @@ export { default as prettierConfig } from './configs/prettier.config.js';
 export { default as purgeCSSConfig } from './configs/purgecss.config.js';
 export { default as stylelintConfig } from './configs/stylelint.config.js';
 export { default as svgoConfig } from './configs/svgo.config.js';
+export { default as terserConfig } from './configs/terser.config.js';
