@@ -3,7 +3,7 @@
   "author": "brybrant",
   "license": "GPL-3.0-only",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -35,7 +35,7 @@
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-high-performance-animation": "^1.11.0",
-    "svgo": "^4.0.0",
+    "svgo": "^3.3.2",
     "terser": "^5.43.1"
   },
   "devDependencies": {

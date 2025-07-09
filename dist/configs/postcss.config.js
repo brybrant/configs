@@ -1,6 +1,6 @@
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
-import purgeCSSPlugin from '@fullhuman/postcss-purgecss';
+import { purgeCSSPlugin } from '@fullhuman/postcss-purgecss';
 import stylelint from 'stylelint';
 import purgeCSSConfig from './purgecss.config.js';
 import stylelintConfig from './stylelint.config.js';
