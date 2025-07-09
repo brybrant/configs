@@ -5,6 +5,8 @@ const bemSyntax = /^[a-z][a-z0-9-]*(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+)?$/;
 
 const snake_case = /^[a-z][a-z0-9]*(_[a-z0-9]+)*$/;
 
+const privateKebab = /^_?[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
+
 /**
  * ### Stylelint Config Object
  * 
@@ -26,6 +28,18 @@ const stylelintConfig: Config = {
     'hue-degree-notation': 'number',
     'number-max-precision': [5, {
       ignoreUnits: ['%'],
+    }],
+    'scss/at-function-pattern': [privateKebab, {
+      message: 'Expected function "%s" to be kebab-case (private functions must start with an underscore)',
+    }],
+    'scss/at-mixin-pattern': [privateKebab, {
+      message: 'Expected mixin "%s" to be kebab-case (private mixins must start with an underscore)',
+    }],
+    'scss/dollar-variable-pattern': [privateKebab, {
+      message: 'Expected variable "%s" to be kebab-case (private variables must start with an underscore)',
+    }],
+    'scss/percent-placeholder-pattern': [privateKebab, {
+      message: 'Expected placeholder "%s" to be kebab-case (private placeholders must start with an underscore)',
     }],
     'selector-attribute-quotes': 'never',
     'selector-class-pattern': [bemSyntax, {
