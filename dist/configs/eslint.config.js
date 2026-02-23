@@ -1,10 +1,11 @@
+import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
-import jsdoc from 'eslint-plugin-jsdoc';
+import { jsdoc } from 'eslint-plugin-jsdoc';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 import prettierConfig from './prettier.config.js';
 /** https://github.com/gajus/eslint-plugin-jsdoc#configuration */
-const jsdocConfig = {
-    ...jsdoc.configs['flat/recommended'],
+const jsdocConfig = jsdoc({
+    config: 'flat/recommended',
     rules: {
         'jsdoc/check-indentation': 1,
         'jsdoc/check-syntax': 1,
@@ -15,14 +16,12 @@ const jsdocConfig = {
         'jsdoc/require-asterisk-prefix': 1,
     },
     settings: {
-        jsdoc: {
-            tagNamePreference: {
-                property: 'prop',
-                augments: 'extends',
-            },
+        tagNamePreference: {
+            property: 'prop',
+            augments: 'extends',
         },
     },
-};
+});
 /**
  * ## ESLint Config Function
  *
@@ -35,11 +34,12 @@ const jsdocConfig = {
  * @param configs - [ESLint config object(s)](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects)
  */
 export default function (...configs) {
-    return [
+    return defineConfig([
         js.configs.recommended,
         ...configs,
         eslintPluginPrettier,
         {
+            name: 'eslint-plugin-prettier/custom',
             rules: {
                 'prettier/prettier': [
                     'error',
@@ -48,7 +48,7 @@ export default function (...configs) {
             },
         },
         jsdocConfig,
-    ];
+    ]);
 }
 ;
 //# sourceMappingURL=eslint.config.js.map

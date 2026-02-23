@@ -1,3 +1,5 @@
+import type { Options } from 'cssnano';
+
 import defaultPreset from 'cssnano-preset-default';
 
 import svgoConfig from './svgo.config.js';
@@ -7,7 +9,7 @@ import svgoConfig from './svgo.config.js';
  * 
  * Extends the default preset with [custom SVGO configuration](./node_modules/@brybrant/configs/dist/configs/svgo.config.js)
  */
-const cssnanoConfig = defaultPreset({
+const cssnanoConfig: Options = defaultPreset({
   svgo: svgoConfig,
 });
 

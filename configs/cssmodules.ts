@@ -29,7 +29,7 @@ import { mkdir, writeFileSync } from 'node:fs';
  * @param cssFileName - Name of the CSS file
  * @param json - {"class": "_class_hash", ...}
  */
-export default (cssFileName: string, json: Record<string, string>) => {
+export default (cssFileName: string, json: Record<string, string>): void => {
   const module = basename(cssFileName, '.scss');
 
   mkdir('./modules', {recursive: true}, (error) => {
