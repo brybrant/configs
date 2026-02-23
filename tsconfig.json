@@ -2,6 +2,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "declaration": true,
+    "isolatedDeclarations": true,
     "module": "NodeNext",
     "outDir": "dist",
     "sourceMap": true,
