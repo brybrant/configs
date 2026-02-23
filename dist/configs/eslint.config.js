@@ -14,6 +14,8 @@ const jsdocConfig = jsdoc({
         'jsdoc/no-defaults': 1,
         'jsdoc/no-multi-asterisks': [1, { 'allowWhitespace': true }],
         'jsdoc/require-asterisk-prefix': 1,
+        'jsdoc/require-param-description': 0,
+        'jsdoc/require-property-description': 0,
     },
     settings: {
         tagNamePreference: {
