@@ -9,7 +9,7 @@ import prettierConfig from './prettier.config.js';
 
 /** https://github.com/gajus/eslint-plugin-jsdoc#configuration */
 const jsdocConfig = jsdoc({
-  config: 'flat/recommended',
+  config: 'flat/recommended-typescript-flavor',
   rules: {
     'jsdoc/check-indentation': 1,
     'jsdoc/check-syntax': 1,
