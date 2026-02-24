@@ -47,7 +47,6 @@ export default function(...configs: Linter.Config[]): Linter.Config[] {
     ...configs,
     eslintPluginPrettier,
     {
-      name: 'eslint-plugin-prettier/custom',
       rules: {
         'prettier/prettier': [
           'error',

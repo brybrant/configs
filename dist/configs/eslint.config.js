@@ -42,7 +42,6 @@ export default function (...configs) {
         ...configs,
         eslintPluginPrettier,
         {
-            name: 'eslint-plugin-prettier/custom',
             rules: {
                 'prettier/prettier': [
                     'error',
