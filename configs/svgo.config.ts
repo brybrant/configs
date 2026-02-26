@@ -9,7 +9,6 @@ const svgoConfig: Config = {
   plugins: [
     'removeDoctype',
     'removeXMLProcInst',
-    'removeXMLNS',
     'removeComments',
     'removeMetadata',
     'removeEditorsNSData',
