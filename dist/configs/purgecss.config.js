@@ -4,7 +4,7 @@
  * https://purgecss.com/configuration.html
  */
 const purgecssConfig = {
-    content: ['index.html', './src/**/*.(jsx|vue)', './modules/*.json'],
+    content: ['index.html', './src/**/*.(jsx|tsx|vue)', './modules/*.json'],
     extractors: [
         {
             /**

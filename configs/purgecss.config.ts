@@ -6,7 +6,7 @@ import type { UserDefinedOptions } from '@fullhuman/postcss-purgecss';
  * https://purgecss.com/configuration.html
  */
 const purgecssConfig: UserDefinedOptions = {
-  content: ['index.html', './src/**/*.(jsx|vue)', './modules/*.json'],
+  content: ['index.html', './src/**/*.(jsx|tsx|vue)', './modules/*.json'],
   extractors: [
     {
       /**
