@@ -1,4 +1,5 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
+import globals from 'globals';
 import js from '@eslint/js';
 import { jsdoc } from 'eslint-plugin-jsdoc';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
@@ -11,6 +12,7 @@ const tseslintConfig = {
     },
     languageOptions: {
         parser: tseslint.parser,
+        globals: globals.nodeBuiltin,
     },
     rules: tseslint.configs.strictTypeChecked.reduce((rules, config) => Object.assign(rules, config.rules ?? {}), {}),
 };
