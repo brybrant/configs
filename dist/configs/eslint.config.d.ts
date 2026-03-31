@@ -2,6 +2,8 @@ import type { Linter } from 'eslint';
 /**
  * ## ESLint Config Function
  *
+ * Ignores all files in the `dist` folder within the current working directory.
+ *
  * ### Configs:
  * 1. [Recommended ESLint config](./node_modules/@eslint/js/src/configs/eslint-recommended.js)
  * 2. **ESLint config object(s)** *(rest parameter)*
