@@ -12,7 +12,7 @@ const tseslintConfig = {
     },
     languageOptions: {
         parser: tseslint.parser,
-        globals: globals.nodeBuiltin,
+        globals: globals.node,
     },
     rules: tseslint.configs.strictTypeChecked.reduce((rules, config) => Object.assign(rules, config.rules ?? {}), {}),
 };
