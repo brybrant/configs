@@ -20,8 +20,6 @@ const tseslintConfig: Linter.Config = {
     globals: globals.nodeBuiltin,
     /** https://typescript-eslint.io/packages/parser */
     parserOptions: {
-      /** Do not parse JSDoc comments */
-      jsDocParsingMode: 'none',
       /** Required for rules which require type information */
       projectService: true,
       /** Root directory for relative TSConfig paths */
