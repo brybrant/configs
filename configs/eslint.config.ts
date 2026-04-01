@@ -11,13 +11,22 @@ import tseslint from 'typescript-eslint';
 import prettierConfig from './prettier.config.js';
 
 const tseslintConfig: Linter.Config = {
-  files: ['**/*.{ts,tsx,cts,mts}'],
+  files: ['./**/*.{ts,tsx,cts,mts}'],
   plugins: {
     '@typescript-eslint': tseslint.plugin,
   },
   languageOptions: {
     parser: tseslint.parser,
-    globals: globals.node,
+    globals: globals.nodeBuiltin,
+    /** https://typescript-eslint.io/packages/parser */
+    parserOptions: {
+      /** Do not parse JSDoc comments */
+      jsDocParsingMode: 'none',
+      /** Required for rules which require type information */
+      projectService: true,
+      /** Root directory for relative TSConfig paths */
+      tsconfigRootDir: import.meta.dirname,
+    },
   },
   rules: tseslint.configs.strictTypeChecked.reduce(
     (rules, config) => Object.assign(rules, config.rules ?? {}),
@@ -36,7 +45,7 @@ const jsdocSettings = {
 const jsdocConfigs = [
   /** JavaScript */
   jsdoc({
-    files: ['**/*.{js,jsx,cjs,mjs}'],
+    files: ['./**/*.{js,jsx,cjs,mjs}'],
     config: 'flat/recommended-typescript-flavor',
     rules: {
       'jsdoc/check-indentation': 1,
@@ -54,7 +63,7 @@ const jsdocConfigs = [
   }),
   /** TypeScript */
   jsdoc({
-    files: ['**/*.{ts,tsx,cts,mts}'],
+    files: ['./**/*.{ts,tsx,cts,mts}'],
     config: 'flat/recommended-typescript',
     rules: {
       'jsdoc/check-indentation': 1,
@@ -89,7 +98,7 @@ export default function(...configs: Linter.Config[]): Linter.Config[] {
     tseslintConfig,
     ...configs,
     {
-      files: ['**/*.{js,ts,jsx,tsx,cjs,cts,mjs,mts}'],
+      files: ['./**/*.{js,ts,jsx,tsx,cjs,cts,mjs,mts}'],
       plugins: eslintPluginPrettier.plugins,
       rules: {
         ...eslintPluginPrettier.rules,
