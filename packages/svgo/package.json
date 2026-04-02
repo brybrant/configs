@@ -1,0 +1,17 @@
+{
+  "name": "@brybrant/svgo-config",
+  "author": "brybrant",
+  "license": "GPL-3.0-only",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "./svgo.config.js",
+  "types": "./svgo.config.d.ts",
+  "exports": "./svgo.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brybrant/configs.git"
+  },
+  "dependencies": {
+    "svgo": "^4.0.1"
+  }
+}

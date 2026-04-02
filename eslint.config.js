@@ -1,3 +1,10 @@
-import { eslintConfig } from '@brybrant/configs';
+import { eslintConfig } from '@brybrant/eslint-config';
 
-export default eslintConfig();
+import globals from 'globals';
+
+export default eslintConfig({
+  files: '*.js',
+  languageOptions: {
+    globals: globals.node,
+  },
+});

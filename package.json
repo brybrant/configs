@@ -3,47 +3,19 @@
   "author": "brybrant",
   "license": "GPL-3.0-only",
   "private": true,
-  "version": "1.4.1",
+  "version": "2.0.0",
   "type": "module",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": "./dist/index.js",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsc --project tsconfig.json"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/brybrant/configs.git"
+    "url": "git+https://github.com/brybrant/configs.git"
   },
-  "dependencies": {
-    "@eslint/js": "^9.39.4",
-    "@fullhuman/postcss-purgecss": "^7.0.2",
-    "autoprefixer": "^10.4.27",
-    "cssnano": "^7.1.4",
-    "eslint": "^9.39.4",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-jsdoc": "^62.8.1",
-    "eslint-plugin-prettier": "^5.5.5",
-    "globals": "^17.4.0",
-    "postcss-load-config": "^6.0.1",
-    "postcss-scss": "^4.0.9",
-    "prettier": "^3.8.1",
-    "stylelint": "^17.6.0",
-    "stylelint-config-hudochenkov": "^13.0.2",
-    "stylelint-config-prettier-scss": "^1.0.0",
-    "stylelint-config-standard-scss": "^17.0.0",
-    "stylelint-high-performance-animation": "^2.0.0",
-    "svgo": "^4.0.1",
-    "terser": "^5.46.0",
-    "typescript-eslint": "^8.58.0"
-  },
+  "workspaces": [
+    "./packages/*"
+  ],
   "devDependencies": {
-    "@brybrant/configs": ".",
-    "@types/eslint": "^9.6.1",
-    "@types/node": "^22.19.15",
-    "typescript": "^5.9.3"
+    "tsdown": "^0.21.7"
   }
 }

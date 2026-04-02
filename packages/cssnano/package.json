@@ -1,0 +1,18 @@
+{
+  "name": "@brybrant/cssnano-config",
+  "author": "brybrant",
+  "license": "GPL-3.0-only",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "./cssnano.config.js",
+  "types": "./cssnano.config.d.ts",
+  "exports": "./cssnano.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brybrant/configs.git"
+  },
+  "dependencies": {
+    "@brybrant/svgo-config": "^0.0.1",
+    "cssnano": "^7.1.4"
+  }
+}

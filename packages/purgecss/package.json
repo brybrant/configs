@@ -1,0 +1,17 @@
+{
+  "name": "@brybrant/purgecss-config",
+  "author": "brybrant",
+  "license": "GPL-3.0-only",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "./purgecss.config.js",
+  "types": "./purgecss.config.d.ts",
+  "exports": "./purgecss.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brybrant/configs.git"
+  },
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2"
+  }
+}

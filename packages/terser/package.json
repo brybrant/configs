@@ -1,0 +1,17 @@
+{
+  "name": "@brybrant/terser-config",
+  "author": "brybrant",
+  "license": "GPL-3.0-only",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "./terser.config.js",
+  "types": "./terser.config.d.ts",
+  "exports": "./terser.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brybrant/configs.git"
+  },
+  "dependencies": {
+    "terser": "^5.46.0"
+  }
+}

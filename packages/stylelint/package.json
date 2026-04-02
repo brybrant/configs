@@ -1,0 +1,21 @@
+{
+  "name": "@brybrant/stylelint-config",
+  "author": "brybrant",
+  "license": "GPL-3.0-only",
+  "version": "0.0.1",
+  "type": "module",
+  "module": "./stylelint.config.js",
+  "types": "./stylelint.config.d.ts",
+  "exports": "./stylelint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brybrant/configs.git"
+  },
+  "dependencies": {
+    "stylelint": "^17.6.0",
+    "stylelint-config-hudochenkov": "^13.0.2",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-high-performance-animation": "^2.0.0"
+  }
+}
