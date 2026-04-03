@@ -1,6 +1,6 @@
 import { Config } from "svgo";
 
-//#region packages/svgo/svgo.config.d.ts
+//#region svgo.config.d.ts
 /**
  * ### SVGO Config Object
  *

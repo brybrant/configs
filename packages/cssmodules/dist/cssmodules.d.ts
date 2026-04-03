@@ -1,4 +1,4 @@
-//#region packages/cssmodules/cssmodules.d.ts
+//#region cssmodules.d.ts
 /**
  * ### CSS Modules Config Function
  *

@@ -2,14 +2,13 @@
   "name": "@brybrant/svgo-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
-  "module": "./svgo.config.js",
-  "types": "./svgo.config.d.ts",
-  "exports": "./svgo.config.js",
+  "module": "./dist/svgo.config.js",
+  "types": "./dist/svgo.config.d.ts",
+  "exports": "./dist/svgo.config.js",
   "files": [
-    "svgo.config.d.ts",
-    "svgo.config.js"
+    "dist"
   ],
   "repository": {
     "type": "git",

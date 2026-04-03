@@ -1,4 +1,4 @@
-//#region packages/prettier/prettier.config.ts
+//#region prettier.config.ts
 /**
 * ### Prettier Config Object
 *

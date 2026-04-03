@@ -2,21 +2,20 @@
   "name": "@brybrant/cssnano-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
-  "module": "./cssnano.config.js",
-  "types": "./cssnano.config.d.ts",
-  "exports": "./cssnano.config.js",
+  "module": "./dist/cssnano.config.js",
+  "types": "./dist/cssnano.config.d.ts",
+  "exports": "./dist/cssnano.config.js",
   "files": [
-    "cssnano.config.d.ts",
-    "cssnano.config.js"
+    "dist"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brybrant/configs.git"
   },
   "dependencies": {
-    "@brybrant/svgo-config": "^0.0.2",
+    "@brybrant/svgo-config": "^0.0.3",
     "cssnano": "^7.1.4"
   }
 }

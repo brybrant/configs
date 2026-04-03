@@ -3,17 +3,25 @@
   "author": "brybrant",
   "license": "GPL-3.0-only",
   "private": true,
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "scripts": {
-    "build": "node build.js"
+    "build": "tsdown -W"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brybrant/configs.git"
   },
   "workspaces": [
-    "./packages/*"
+    "packages/cssmodules",
+    "packages/terser",
+    "packages/svgo",
+    "packages/cssnano",
+    "packages/purgecss",
+    "packages/stylelint",
+    "packages/postcss",
+    "packages/prettier",
+    "packages/eslint"
   ],
   "devDependencies": {
     "tsdown": "^0.21.7"

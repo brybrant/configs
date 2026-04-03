@@ -1,6 +1,6 @@
 import { Config } from "stylelint";
 
-//#region packages/stylelint/stylelint.config.d.ts
+//#region stylelint.config.d.ts
 /**
  * ### Stylelint Config Object
  *

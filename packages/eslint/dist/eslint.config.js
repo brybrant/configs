@@ -4,21 +4,8 @@ import js from "@eslint/js";
 import { jsdoc } from "eslint-plugin-jsdoc";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import tseslint from "typescript-eslint";
-//#region packages/prettier/prettier.config.mjs
-/**
-* ### Prettier Config Object
-* 
-* https://prettier.io/docs/en/options
-*/
-const prettierConfig = {
-	bracketSameLine: false,
-	bracketSpacing: true,
-	endOfLine: "auto",
-	singleQuote: true,
-	jsxSingleQuote: true
-};
-//#endregion
-//#region packages/eslint/eslint.config.ts
+import prettierConfig from "@brybrant/prettier-config";
+//#region eslint.config.ts
 const tseslintConfig = {
 	files: ["./**/*.{ts,tsx,cts,mts}"],
 	plugins: { "@typescript-eslint": tseslint.plugin },

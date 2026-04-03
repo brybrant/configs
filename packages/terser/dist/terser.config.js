@@ -1,4 +1,4 @@
-//#region packages/terser/terser.config.ts
+//#region terser.config.ts
 /**
 * ### Terser Config Object
 *

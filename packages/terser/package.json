@@ -2,14 +2,13 @@
   "name": "@brybrant/terser-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
-  "module": "./terser.config.js",
-  "types": "./terser.config.d.ts",
-  "exports": "./terser.config.js",
+  "module": "./dist/terser.config.js",
+  "types": "./dist/terser.config.d.ts",
+  "exports": "./dist/terser.config.js",
   "files": [
-    "terser.config.d.ts",
-    "terser.config.js"
+    "dist"
   ],
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 import { Linter } from "eslint";
 
-//#region packages/eslint/eslint.config.d.ts
+//#region eslint.config.d.ts
 /**
  * ## ESLint Config Function
  *

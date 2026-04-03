@@ -1,6 +1,6 @@
 import { basename } from "node:path";
 import { mkdir, writeFile } from "node:fs/promises";
-//#region packages/cssmodules/cssmodules.ts
+//#region cssmodules.ts
 /**
 * ### CSS Modules Config Function
 *

@@ -1,6 +1,6 @@
 import { ConfigFn } from "postcss-load-config";
 
-//#region packages/postcss/postcss.config.d.ts
+//#region postcss.config.d.ts
 /**
  * ## PostCSS Config Function
  *

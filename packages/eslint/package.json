@@ -2,21 +2,20 @@
   "name": "@brybrant/eslint-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
-  "module": "./eslint.config.js",
-  "types": "./eslint.config.d.ts",
-  "exports": "./eslint.config.js",
+  "module": "./dist/eslint.config.js",
+  "types": "./dist/eslint.config.d.ts",
+  "exports": "./dist/eslint.config.js",
   "files": [
-    "eslint.config.d.ts",
-    "eslint.config.js"
+    "dist"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brybrant/configs.git"
   },
   "dependencies": {
-    "@brybrant/prettier-config": "^0.0.2",
+    "@brybrant/prettier-config": "^0.0.3",
     "@types/node": "^22.19.15",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",

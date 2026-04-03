@@ -1,6 +1,6 @@
 import { Config } from "prettier";
 
-//#region packages/prettier/prettier.config.d.ts
+//#region prettier.config.d.ts
 /**
  * ### Prettier Config Object
  *

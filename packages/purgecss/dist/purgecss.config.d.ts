@@ -1,6 +1,6 @@
 import { UserDefinedOptions } from "@fullhuman/postcss-purgecss";
 
-//#region packages/purgecss/purgecss.config.d.ts
+//#region purgecss.config.d.ts
 /**
  * ### PurgeCSS Config Object
  *

@@ -1,4 +1,4 @@
-//#region packages/purgecss/purgecss.config.ts
+//#region purgecss.config.ts
 /**
 * ### PurgeCSS Config Object
 *

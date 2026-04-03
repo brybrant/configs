@@ -1,6 +1,6 @@
 import { Options } from "cssnano";
 
-//#region packages/cssnano/cssnano.config.d.ts
+//#region cssnano.config.d.ts
 /**
  * ### CSSNANO Config Object
  *

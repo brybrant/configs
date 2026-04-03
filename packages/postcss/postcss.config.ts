@@ -1,4 +1,4 @@
-import type { Config, ConfigFn } from 'postcss-load-config';
+import type { ConfigFn } from 'postcss-load-config';
 
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
@@ -24,7 +24,7 @@ import stylelintConfig from '@brybrant/stylelint-config';
 const postcssConfigFn: ConfigFn = function(/* ctx */) {
   // const development = ctx.env === 'development';
 
-  const postcssConfig: Config = {
+  return {
     syntax: 'postcss-scss',
     plugins: [
       stylelint(stylelintConfig),
@@ -33,8 +33,6 @@ const postcssConfigFn: ConfigFn = function(/* ctx */) {
       autoprefixer(),
     ],
   };
-
-  return postcssConfig;
 }
 
 export default postcssConfigFn;

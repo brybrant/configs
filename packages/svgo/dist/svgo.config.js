@@ -1,4 +1,4 @@
-//#region packages/svgo/svgo.config.ts
+//#region svgo.config.ts
 /**
 * ### SVGO Config Object
 *

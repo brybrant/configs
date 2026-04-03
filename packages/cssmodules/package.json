@@ -2,14 +2,13 @@
   "name": "@brybrant/cssmodules",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
-  "module": "./cssmodules.js",
-  "types": "./cssmodules.d.ts",
-  "exports": "./cssmodules.js",
+  "module": "./dist/cssmodules.js",
+  "types": "./dist/cssmodules.d.ts",
+  "exports": "./dist/cssmodules.js",
   "files": [
-    "cssmodules.d.ts",
-    "cssmodules.js"
+    "dist"
   ],
   "repository": {
     "type": "git",

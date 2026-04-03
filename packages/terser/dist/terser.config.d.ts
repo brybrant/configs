@@ -1,6 +1,6 @@
 import { MinifyOptions } from "terser";
 
-//#region packages/terser/terser.config.d.ts
+//#region terser.config.d.ts
 /**
  * ### Terser Config Object
  *

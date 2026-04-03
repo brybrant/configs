@@ -2,14 +2,13 @@
   "name": "@brybrant/purgecss-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
-  "module": "./purgecss.config.js",
-  "types": "./purgecss.config.d.ts",
-  "exports": "./purgecss.config.js",
+  "module": "./dist/purgecss.config.js",
+  "types": "./dist/purgecss.config.d.ts",
+  "exports": "./dist/purgecss.config.js",
   "files": [
-    "purgecss.config.d.ts",
-    "purgecss.config.js"
+    "dist"
   ],
   "repository": {
     "type": "git",
