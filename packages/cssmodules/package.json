@@ -2,11 +2,15 @@
   "name": "@brybrant/cssmodules",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "module": "./cssmodules.js",
   "types": "./cssmodules.d.ts",
   "exports": "./cssmodules.js",
+  "files": [
+    "cssmodules.d.ts",
+    "cssmodules.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brybrant/configs.git"

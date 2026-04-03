@@ -2,11 +2,15 @@
   "name": "@brybrant/prettier-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "module": "./prettier.config.js",
   "types": "./prettier.config.d.ts",
   "exports": "./prettier.config.js",
+  "files": [
+    "prettier.config.d.ts",
+    "prettier.config.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brybrant/configs.git"
