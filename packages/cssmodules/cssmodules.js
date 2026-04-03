@@ -1,5 +1,5 @@
 import { basename } from "node:path";
-import { mkdir, writeFileSync } from "node:fs";
+import { mkdir, writeFile } from "node:fs/promises";
 //#region packages/cssmodules/cssmodules.ts
 /**
 * ### CSS Modules Config Function
@@ -28,13 +28,13 @@ import { mkdir, writeFileSync } from "node:fs";
 * ```
 * @param cssFileName Name of the CSS file
 * @param json `{"class": "_class_hash", ... }`
+* @returns Promise which fulfills with `void` upon success
 */
-var cssmodules_default = (cssFileName, json) => {
+async function cssModulesExportJSON(cssFileName, json) {
 	const module = basename(cssFileName, ".scss");
-	mkdir("./modules", { recursive: true }, (error) => {
-		if (error) throw error;
-		writeFileSync(`./modules/${module}.json`, JSON.stringify(json));
+	return mkdir("./modules", { recursive: true }).then(() => {
+		return writeFile(`./modules/${module}.json`, JSON.stringify(json));
 	});
-};
+}
 //#endregion
-export { cssmodules_default as default };
+export { cssModulesExportJSON as default };

@@ -26,7 +26,8 @@
  * ```
  * @param cssFileName Name of the CSS file
  * @param json `{"class": "_class_hash", ... }`
+ * @returns Promise which fulfills with `void` upon success
  */
-declare const _default: (cssFileName: string, json: Record<string, string>) => void;
+declare function cssModulesExportJSON(cssFileName: string, json: Record<string, string>): Promise<void>;
 //#endregion
-export { _default as default };
+export { cssModulesExportJSON as default };
