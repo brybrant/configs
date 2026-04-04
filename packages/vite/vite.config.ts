@@ -22,7 +22,7 @@ const svgoPlugin: Plugin = {
 
     const convertToJSX = new URLSearchParams(qs).has('jsx');
 
-    return readFile(id, 'utf8').then((svg) => {
+    return readFile(path, 'utf8').then((svg) => {
       const { data } = optimize(svg, Object.assign({}, svgoConfig, { path }));
 
       /** Borrowed from `vite-plugin-solid-svg` */

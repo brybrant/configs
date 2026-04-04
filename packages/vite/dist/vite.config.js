@@ -16,7 +16,7 @@ const svgoPlugin = {
 		const [path, qs] = id.split("?");
 		if (!path.endsWith(".svg")) return null;
 		const convertToJSX = new URLSearchParams(qs).has("jsx");
-		return readFile(id, "utf8").then((svg) => {
+		return readFile(path, "utf8").then((svg) => {
 			const { data } = optimize(svg, Object.assign({}, svgoConfig, { path }));
 			/** Borrowed from `vite-plugin-solid-svg` */
 			if (convertToJSX) return `export default (props = {}) => ${data.replace(/([{}])/g, "{\"$1\"}").replace(/<!--\s*([\s\S]*?)\s*-->/g, "{/* $1 */}").replace(/(<svg[^>]*)>/i, "$1{...props}>")}`;
