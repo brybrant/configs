@@ -15,10 +15,10 @@ const privateKebab = /^_?[a-z][a-z0-9]*(-[a-z0-9]+)*$/;
 const stylelintConfig: Config = {
   cache: true,
   extends: [
-    'stylelint-config-html',
     'stylelint-config-standard-scss',
     'stylelint-config-prettier-scss',
     'stylelint-config-hudochenkov/order',
+    'stylelint-config-html',
   ],
   fix: false,
   plugins: [

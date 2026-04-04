@@ -2,7 +2,7 @@
   "name": "@brybrant/stylelint-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "module": "./dist/stylelint.config.js",
   "types": "./dist/stylelint.config.d.ts",
