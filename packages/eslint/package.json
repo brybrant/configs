@@ -2,7 +2,7 @@
   "name": "@brybrant/eslint-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "module": "./dist/eslint.config.js",
   "types": "./dist/eslint.config.d.ts",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@brybrant/prettier-config": "^0.0.3",
-    "@types/node": "^22.19.15",
+    "@types/node": "^22.19.17",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsdoc": "^62.8.1",
