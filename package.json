@@ -6,7 +6,7 @@
   "version": "2.0.1",
   "type": "module",
   "scripts": {
-    "build": "tsdown -W"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,8 @@
     "packages/stylelint",
     "packages/postcss",
     "packages/prettier",
-    "packages/eslint"
+    "packages/eslint",
+    "packages/vite"
   ],
   "devDependencies": {
     "tsdown": "^0.21.7"
