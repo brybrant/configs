@@ -15,25 +15,11 @@ import terserConfig from '@brybrant/terser-config';
 const svgoPlugin: Plugin = {
   name: '@brybrant/vite-plugin-svgo',
   enforce: 'pre',
-  async load(id) {
-    const [path, qs] = id.split('?');
-
+  async load(path) {
     if (!path.endsWith('.svg')) return null;
-
-    const convertToJSX = new URLSearchParams(qs).has('jsx');
 
     return readFile(path, 'utf8').then((svg) => {
       const { data } = optimize(svg, Object.assign({}, svgoConfig, { path }));
-
-      /** Borrowed from `vite-plugin-solid-svg` */
-      if (convertToJSX) {
-        const jsx = data
-          .replace(/([{}])/g, '{"$1"}')
-          .replace(/<!--\s*([\s\S]*?)\s*-->/g, '{/* $1 */}')
-          .replace(/(<svg[^>]*)>/i, '$1{...props}>');
-
-        return `export default (props = {}) => ${jsx}`;
-      }
 
       return `export default \`${data}\`;`;
     });
