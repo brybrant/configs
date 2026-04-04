@@ -1,4 +1,4 @@
-import { eslintConfig } from '@brybrant/eslint-config';
+import eslintConfig from '@brybrant/eslint-config';
 
 import globals from 'globals';
 
