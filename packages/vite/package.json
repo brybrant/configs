@@ -2,7 +2,7 @@
   "name": "@brybrant/vite-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "module": "./dist/vite.config.js",
   "types": "./dist/vite.config.d.ts",
@@ -17,7 +17,7 @@
   "dependencies": {
     "@brybrant/cssmodules": "^0.0.3",
     "@brybrant/eslint-config": "^0.0.4",
-    "@brybrant/postcss-config": "^0.0.3",
+    "@brybrant/postcss-config": "^0.0.4",
     "@brybrant/stylelint-config": "^0.0.5",
     "@brybrant/svgo-config": "^0.0.3",
     "@brybrant/terser-config": "^0.0.3",
