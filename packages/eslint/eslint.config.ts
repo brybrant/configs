@@ -4,7 +4,7 @@ import type { RulesConfig } from '@eslint/core';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 import js from '@eslint/js';
-import { jsdoc } from 'eslint-plugin-jsdoc';
+import eslintPluginJSDoc from 'eslint-plugin-jsdoc';
 import eslintPluginPrettier from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
 
@@ -32,47 +32,49 @@ const tseslintConfig: Linter.Config = {
   ) as RulesConfig,
 };
 
-const jsdocSettings = {
-  tagNamePreference: {
-    property: 'prop',
-    augments: 'extends',
+/** https://github.com/gajus/eslint-plugin-jsdoc#configuration */
+const jsdocBaseConfig: Linter.Config = {
+  plugins: { jsdoc: eslintPluginJSDoc },
+  rules: {
+    'jsdoc/check-indentation': 1,
+    'jsdoc/check-syntax': 1,
+    'jsdoc/no-blank-block-descriptions': 1,
+    'jsdoc/no-blank-blocks': 1,
+    'jsdoc/no-defaults': 1,
+    'jsdoc/no-multi-asterisks': [1, { 'allowWhitespace': true }],
+    'jsdoc/require-asterisk-prefix': 1,
+  },
+  settings: {
+    tagNamePreference: {
+      property: 'prop',
+      augments: 'extends',
+    },
   },
 };
 
-/** https://github.com/gajus/eslint-plugin-jsdoc#configuration */
-const jsdocConfigs = [
+const jsdocConfigs: Linter.Config[] = [
   /** JavaScript */
-  jsdoc({
+  Object.assign({}, jsdocBaseConfig, {
     files: ['./**/*.{js,jsx,cjs,mjs}'],
-    config: 'flat/recommended-typescript-flavor',
-    rules: {
-      'jsdoc/check-indentation': 1,
-      'jsdoc/check-syntax': 1,
-      'jsdoc/no-blank-block-descriptions': 1,
-      'jsdoc/no-blank-blocks': 1,
-      'jsdoc/no-defaults': 1,
-      'jsdoc/no-multi-asterisks': [1, { 'allowWhitespace': true }],
-      'jsdoc/require-asterisk-prefix': 1,
-      'jsdoc/require-param-description': 0,
-      'jsdoc/require-property-description': 0,
-      'jsdoc/require-returns': 0,
-    },
-    settings: jsdocSettings,
+    rules: Object.assign(
+      {},
+      eslintPluginJSDoc.configs['flat/recommended-typescript-flavor'].rules,
+      jsdocBaseConfig.rules,
+      {
+        'jsdoc/require-param-description': 0,
+        'jsdoc/require-property-description': 0,
+        'jsdoc/require-returns': 0,
+      },
+    ),
   }),
   /** TypeScript */
-  jsdoc({
+  Object.assign({}, jsdocBaseConfig, {
     files: ['./**/*.{ts,tsx,cts,mts}'],
-    config: 'flat/recommended-typescript',
-    rules: {
-      'jsdoc/check-indentation': 1,
-      'jsdoc/check-syntax': 1,
-      'jsdoc/no-blank-block-descriptions': 1,
-      'jsdoc/no-blank-blocks': 1,
-      'jsdoc/no-defaults': 1,
-      'jsdoc/no-multi-asterisks': [1, { 'allowWhitespace': true }],
-      'jsdoc/require-asterisk-prefix': 1,
-    },
-    settings: jsdocSettings,
+    rules: Object.assign(
+      {},
+      eslintPluginJSDoc.configs['flat/recommended-typescript'].rules,
+      jsdocBaseConfig.rules,
+    ),
   }),
 ];
 
@@ -90,7 +92,7 @@ const jsdocConfigs = [
  * 
  * @param configs - [ESLint config object(s)](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects)
  */
-export default function(...configs: Linter.Config[]): Linter.Config[] {
+const eslintConfig = (...configs: Linter.Config[]): Linter.Config[] => {
   return defineConfig([
     globalIgnores(['./dist/**/*']),
     js.configs.recommended,
@@ -107,3 +109,5 @@ export default function(...configs: Linter.Config[]): Linter.Config[] {
     ...jsdocConfigs,
   ]);
 };
+
+export default eslintConfig;

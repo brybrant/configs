@@ -2,7 +2,7 @@
   "name": "@brybrant/eslint-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "module": "./dist/eslint.config.js",
   "types": "./dist/eslint.config.d.ts",
@@ -24,7 +24,7 @@
     "typescript-eslint": "^8.58.0"
   },
   "peerDependencies": {
-    "eslint": "^9.0.0 || ^10.0.0"
+    "eslint": "9.x || 10.x"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
