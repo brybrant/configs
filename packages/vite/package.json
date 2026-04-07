@@ -2,7 +2,7 @@
   "name": "@brybrant/vite-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "module": "./dist/vite.config.js",
   "types": "./dist/vite.config.d.ts",
@@ -16,16 +16,17 @@
   },
   "dependencies": {
     "@brybrant/cssmodules": "^0.0.3",
-    "@brybrant/eslint-config": "^0.0.5",
+    "@brybrant/eslint-config": "^0.0.6",
     "@brybrant/postcss-config": "^0.0.4",
-    "@brybrant/stylelint-config": "^0.0.5",
-    "@brybrant/svgo-config": "^0.0.3",
     "@brybrant/terser-config": "^0.0.3",
     "sass-embedded": "^1.97.3",
     "vite-plugin-eslint2": "^5.0.5",
     "vite-plugin-stylelint": "6.1.0"
   },
   "peerDependencies": {
-    "vite": "^7.0.0 || ^8.0.0"
+    "vite": "7.x || 8.x"
+  },
+  "devDependencies": {
+    "vite": "^7.3.2"
   }
 }
