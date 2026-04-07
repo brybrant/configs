@@ -13,16 +13,7 @@
     "url": "git+https://github.com/brybrant/configs.git"
   },
   "workspaces": [
-    "packages/cssmodules",
-    "packages/terser",
-    "packages/svgo",
-    "packages/cssnano",
-    "packages/purgecss",
-    "packages/stylelint",
-    "packages/postcss",
-    "packages/prettier",
-    "packages/eslint",
-    "packages/vite"
+    "packages/**"
   ],
   "devDependencies": {
     "tsdown": "^0.21.7"
