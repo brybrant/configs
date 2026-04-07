@@ -9,6 +9,7 @@ function createConfig(workspaces) {
   return {
     deps: {
       skipNodeModulesBundle: true,
+      neverBundle: [/^@brybrant\//],
     },
     dts: true,
     entry: `*.ts`,
