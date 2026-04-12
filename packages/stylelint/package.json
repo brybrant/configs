@@ -2,7 +2,7 @@
   "name": "@brybrant/stylelint-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "module": "./dist/stylelint.config.js",
   "types": "./dist/stylelint.config.d.ts",
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/brybrant/configs.git"
   },
   "dependencies": {
-    "stylelint": "^17.6.0",
+    "stylelint": "^17.7.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-hudochenkov": "^13.0.2",
     "stylelint-config-prettier-scss": "^1.0.0",
