@@ -1,5 +1,4 @@
-import type { Linter } from 'eslint';
-import type { RulesConfig } from '@eslint/core';
+import type { ConfigWithExtends } from '@eslint/config-helpers';
 
 import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
@@ -10,11 +9,10 @@ import tseslint from 'typescript-eslint';
 
 import prettierConfig from '@brybrant/prettier-config';
 
-const tseslintConfig: Linter.Config = {
+/** https://typescript-eslint.io/rules/ */
+const tseslintConfig: ConfigWithExtends = {
+  extends: tseslint.configs.strictTypeChecked,
   files: ['./**/*.{ts,tsx,cts,mts}'],
-  plugins: {
-    '@typescript-eslint': tseslint.plugin,
-  },
   languageOptions: {
     parser: tseslint.parser,
     globals: globals.nodeBuiltin,
@@ -26,14 +24,19 @@ const tseslintConfig: Linter.Config = {
       tsconfigRootDir: import.meta.dirname,
     },
   },
-  rules: tseslint.configs.strictTypeChecked.reduce(
-    (rules, config) => Object.assign(rules, config.rules ?? {}),
-    {},
-  ) as RulesConfig,
+  rules: {
+    '@typescript-eslint/restrict-template-expressions': [
+      1,
+      {
+        allowBoolean: true,
+        allowNumber: true,
+      },
+    ]
+  },
 };
 
 /** https://github.com/gajus/eslint-plugin-jsdoc#configuration */
-const jsdocBaseConfig: Linter.Config = {
+const jsdocBaseConfig: ConfigWithExtends = {
   plugins: { jsdoc: eslintPluginJSDoc },
   rules: {
     'jsdoc/check-indentation': 1,
@@ -41,7 +44,7 @@ const jsdocBaseConfig: Linter.Config = {
     'jsdoc/no-blank-block-descriptions': 1,
     'jsdoc/no-blank-blocks': 1,
     'jsdoc/no-defaults': 1,
-    'jsdoc/no-multi-asterisks': [1, { 'allowWhitespace': true }],
+    'jsdoc/no-multi-asterisks': [1, { allowWhitespace: true }],
     'jsdoc/require-asterisk-prefix': 1,
   },
   settings: {
@@ -52,30 +55,28 @@ const jsdocBaseConfig: Linter.Config = {
   },
 };
 
-const jsdocConfigs: Linter.Config[] = [
+const jsdocConfigs: ConfigWithExtends[] = [
   /** JavaScript */
-  Object.assign({}, jsdocBaseConfig, {
+  {
+    extends: [
+      eslintPluginJSDoc.configs['flat/recommended-typescript-flavor'],
+      jsdocBaseConfig,
+    ],
     files: ['./**/*.{js,jsx,cjs,mjs}'],
-    rules: Object.assign(
-      {},
-      eslintPluginJSDoc.configs['flat/recommended-typescript-flavor'].rules,
-      jsdocBaseConfig.rules,
-      {
-        'jsdoc/require-param-description': 0,
-        'jsdoc/require-property-description': 0,
-        'jsdoc/require-returns': 0,
-      },
-    ),
-  }),
+    rules: {
+      'jsdoc/require-param-description': 0,
+      'jsdoc/require-property-description': 0,
+      'jsdoc/require-returns': 0,
+    },
+  },
   /** TypeScript */
-  Object.assign({}, jsdocBaseConfig, {
+  {
+    extends: [
+      eslintPluginJSDoc.configs['flat/recommended-typescript'],
+      jsdocBaseConfig,
+    ],
     files: ['./**/*.{ts,tsx,cts,mts}'],
-    rules: Object.assign(
-      {},
-      eslintPluginJSDoc.configs['flat/recommended-typescript'].rules,
-      jsdocBaseConfig.rules,
-    ),
-  }),
+  },
 ];
 
 /**
@@ -84,15 +85,15 @@ const jsdocConfigs: Linter.Config[] = [
  * Ignores all files in the `dist` folder within the current working directory.
  *
  * ### Configs:
- * 1. [Recommended JS ESLint config](https://www.npmjs.com/@eslint/js)
- * 2. {@link tseslintConfig my TS ESLint config}
+ * 1. [Recommended JavaScript ESLint config](https://www.npmjs.com/@eslint/js)
+ * 2. {@link tseslintConfig my TypeScript ESLint config}
  * 3. **ESLint config object(s)** *(rest parameter)*
  * 4. [my Prettier config](https://www.npmjs.com/@brybrant/prettier-config)
  * 5. {@link jsdocConfigs JSDoc ESLint config}
  * 
  * @param configs - [ESLint config object(s)](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-objects)
  */
-const eslintConfig = (...configs: Linter.Config[]): Linter.Config[] => {
+const eslintConfig = (...configs: ConfigWithExtends[]): ConfigWithExtends[] => {
   return defineConfig([
     globalIgnores(['./dist/**/*']),
     js.configs.recommended,
