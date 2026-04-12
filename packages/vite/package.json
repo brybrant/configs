@@ -2,7 +2,7 @@
   "name": "@brybrant/vite-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "module": "./dist/vite.config.js",
   "types": "./dist/vite.config.d.ts",
