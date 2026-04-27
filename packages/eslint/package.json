@@ -2,7 +2,7 @@
   "name": "@brybrant/eslint-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "module": "./dist/eslint.config.js",
   "types": "./dist/eslint.config.d.ts",
@@ -15,13 +15,13 @@
     "url": "git+https://github.com/brybrant/configs.git"
   },
   "dependencies": {
-    "@brybrant/prettier-config": "^0.0.4",
+    "@brybrant/prettier-config": "^0.0.5",
     "@types/node": "^22.19.17",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsdoc": "^62.8.1",
     "eslint-plugin-prettier": "^5.5.5",
     "globals": "^17.5.0",
-    "typescript-eslint": "^8.58.1"
+    "typescript-eslint": "^8.59.0"
   },
   "peerDependencies": {
     "eslint": "9.x || 10.x"
