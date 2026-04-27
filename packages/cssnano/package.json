@@ -2,7 +2,7 @@
   "name": "@brybrant/cssnano-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "module": "./dist/cssnano.config.js",
   "types": "./dist/cssnano.config.d.ts",
@@ -16,6 +16,6 @@
   },
   "dependencies": {
     "@brybrant/svgo-config": "^0.0.3",
-    "cssnano": "^7.1.4"
+    "cssnano": "^7.1.7"
   }
 }
