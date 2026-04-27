@@ -2,7 +2,7 @@
   "name": "@brybrant/postcss-config",
   "author": "brybrant",
   "license": "GPL-3.0-only",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "module": "./dist/postcss.config.js",
   "types": "./dist/postcss.config.d.ts",
@@ -15,10 +15,10 @@
     "url": "git+https://github.com/brybrant/configs.git"
   },
   "dependencies": {
-    "@brybrant/cssnano-config": "^0.0.3",
+    "@brybrant/cssnano-config": "^0.0.4",
     "@brybrant/purgecss-config": "^0.0.3",
-    "@brybrant/stylelint-config": "^0.0.6",
-    "autoprefixer": "^10.4.27",
+    "@brybrant/stylelint-config": "^0.0.7",
+    "autoprefixer": "^10.5.0",
     "postcss-load-config": "^6.0.1",
     "postcss-scss": "^4.0.9"
   }
