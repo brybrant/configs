@@ -3,7 +3,7 @@
   "author": "brybrant",
   "license": "GPL-3.0-only",
   "private": true,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "scripts": {
     "build": "node build.js"
@@ -16,6 +16,6 @@
     "packages/**"
   ],
   "devDependencies": {
-    "tsdown": "^0.21.7"
+    "tsdown": "^0.21.10"
   }
 }
